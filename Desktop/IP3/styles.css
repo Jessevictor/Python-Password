@@ -1,0 +1,46 @@
+.container{
+    overflow: hidden;
+    
+}
+.intro{
+    background-image: url(/images/landing.jpg);
+    background-size: cover;
+    padding:200px;
+    padding-left: 20px;
+}
+.logo{
+    display: block;
+    margin-left: 530px;
+    margin-right: auto;
+    width: 50px
+}
+#welcome{
+    text-align: center;
+    color: white;
+    margin-left:225px;
+    font-size:28px ;
+    font-weight: bold;
+}
+#dilani{
+    text-align: center;
+    color: white;
+    margin-left:225px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.intro  p{
+    text-align: center;
+    color: white;
+    margin-left:225px;
+    font-size: xx-small;
+    font-weight: bold;
+}
+.click{
+    display: block;
+    margin-left: 530px;
+    margin-right: auto;
+    position: absolute;
+    bottom:-8px; 
+}
+
+

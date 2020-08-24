@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <h2 class="text-center">Add your Quote</h2>
+    <hr>
+    <form  (ngSubmit)='submitQuote()' #goalForm='ngForm'>
+        <div class="form-group">
+
+            <label for="quote">Quote</label>
+            <textarea class="form-control" id="quote"  cols="fa-900px"  rows="" [(ngModel)]="newQuote.quote" quote="quote" #quote="ngModel" required></textarea>
+            <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
+              <p>Description is required</p>
+            </div>
+           
+        </div>
+        <div class="form-group">
+            <label for="Author">Author`s Name</label>
+            <input type="text"  class="form-control" id="Author" [(ngModel)]="newQuote.Author" Author="Author" #Author='ngModel' required>
+        <div [hidden]="Author.valid || Author.pristine" class="alert alert-danger">
+            <p>Auther`s Name requrired</p>
+        </div>
+      <!-- Testing if we see we can get data -->
+              Display {{newQuote.Author}}
+        </div>
+        <button type="submit" class="btn btn-success">Add Quote</button>
+
+    
+    </form>
+
+</div>

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3.8
-from passlock import User, Credentials
+from password import User
+from credentials import Credentials
 
 def create_new_user(username,password):
     '''
@@ -87,7 +88,7 @@ def passlocker():
             if password_Choice == 'tp':
                 password = input("Enter Password\n")
                 break
-            elif password_Choice == 'gp':
+            elif password_Choice == 'pc':
                 password = generate_Password()
                 break
             else:
@@ -96,7 +97,7 @@ def passlocker():
         print("*"*85)
         print(f"Hello {username}, Your account has been created succesfully! Your password is: {password}")
         print("*"*85)
-    elif short_code == "li":
+    elif short_code == "lg":
         print("*"*50)
         print("Enter your User name and your Password to log in:")
         print('*' * 50)
@@ -107,7 +108,7 @@ def passlocker():
             print(f"Hello {username}.Welcome To PassWord Locker Manager")  
             print('\n')
     while True:
-        print("Use these short codes:\n CC - Create a new credential \n DC - Display Credentials \n FC - Find a credential \n GP - Generate A randomn password \n D - Delete credential \n EX - Exit the application \n")
+        print("Use these short codes:\n CC - Create a new credential \n DC - Display Credentials \n FC - Find a credential \n GrP - Generate A randomn password \n Dc - Delete credential \n EX - Exit the application \n")
         short_code = input().lower().strip()
         if short_code == "cc":
             print("Create New Credential")
@@ -155,7 +156,7 @@ def passlocker():
             else:
                 print("That Credential does not exist")
                 print('\n')
-        elif short_code == "d":
+        elif short_code == "dl":
             print("Enter the account name of the Credentials you want to delete")
             search_name = input().lower()
             if find_credential(search_name):
